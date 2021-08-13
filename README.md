@@ -10,7 +10,7 @@ Cloudfront link: https://d3mg7975p1q6dx.cloudfront.net
 
 **Automated configured s3/cloudfront resources:**
 
-S3 link: http://node-in-aws-web-app.s3-website-eu-west-1.amazonaws.com/
+S3 link: http://node-in-aws-web-app.s3-website-eu-west-1.amazonaws.com
 
 Cloudfront link: https://d24rcb0ua3xd7g.cloudfront.net
 
