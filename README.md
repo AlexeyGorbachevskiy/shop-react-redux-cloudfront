@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## S3 & Cloudfront links:
+
+**Manual configured s3/cloudfront resources:**
+
+S3 link: http://node-in-aws-web.s3-website-eu-west-1.amazonaws.com
+
+Cloudfront link: https://d3mg7975p1q6dx.cloudfront.net
+
+**Automated configured s3/cloudfront resources:**
+
+S3 link: http://node-in-aws-web-app.s3-website-eu-west-1.amazonaws.com
+
+Cloudfront link: https://d24rcb0ua3xd7g.cloudfront.net
+
 ## Available Scripts
 
 In the project directory, you can run:  
