@@ -48,16 +48,18 @@ resources:
           Ref: WebAppS3Bucket
         PolicyDocument:
           Statement:
-            - Sid: 'AllowCloudFrontAccessIdentity'
+#            - Sid: 'AllowCloudFrontAccessIdentity'
+            - Sid: 'PublicReadGetObject'
               Effect: Allow
               Action: s3:GetObject
               Resource: arn:aws:s3:::${self:custom.s3BucketName}/*
-              Principal:
-                AWS:
-                  Fn::Join:
-                    - ' '
-                    - - 'arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity'
-                      - !Ref OriginAccessIdentity
+              Principal: '*'
+#              Principal:
+#                AWS:
+#                  Fn::Join:
+#                    - ' '
+#                    - - 'arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity'
+#                      - !Ref OriginAccessIdentity
 
     OriginAccessIdentity:
       Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
@@ -72,6 +74,7 @@ resources:
         DistributionConfig:
           Origins:
             - DomainName: !GetAtt WebAppS3Bucket.RegionalDomainName
+#            - DomainName: ${self:custom.s3BucketName}.s3.${self:provider.region}.amazonaws.com
               ## An identifier for the origin which must be unique within the distribution
               Id: myS3Origin
               ## In case you don't want to restrict the bucket access use CustomOriginConfig and remove S3OriginConfig
