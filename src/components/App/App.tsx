@@ -35,7 +35,7 @@ function App() {
             <Route exact path="/admin/order/:id">
               <PageOrder />
             </Route>
-            <Route exact path="/admin/products">
+            <Route exact path={['/admin/products', "/admin/products/:id"]}>
               <PageProductImport />
             </Route>
           </MainLayout>
