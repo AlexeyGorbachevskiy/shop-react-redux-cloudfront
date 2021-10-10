@@ -16,7 +16,7 @@ import PageProductImport from "components/pages/admin/PageProductImport/PageProd
 function App() {
 
   useEffect(()=>{
-    const authToken = btoa('TEST_PASSWORD');
+    const authToken = btoa('AlexeyGorbachevskiy:TEST_PASSWORD');
     localStorage.setItem('authorization_token', authToken);
   },[])
 
