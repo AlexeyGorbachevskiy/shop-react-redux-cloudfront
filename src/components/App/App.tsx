@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import 'components/App/App.css';
 import PageProducts from "components/pages/PageProducts/PageProducts";
 import MainLayout from "components/MainLayout/MainLayout";
@@ -14,6 +14,11 @@ import PageOrder from "components/pages/PageOrder/PageOrder";
 import PageProductImport from "components/pages/admin/PageProductImport/PageProductImport";
 
 function App() {
+
+  useEffect(()=>{
+    const authToken = btoa('AlexeyGorbachevskiy:TEST_PASSWORD');
+    localStorage.setItem('authorization_token', authToken);
+  },[])
 
   return (
     <Router>
