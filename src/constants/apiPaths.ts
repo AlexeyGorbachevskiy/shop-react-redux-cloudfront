@@ -5,6 +5,7 @@ const API_PATHS = {
   import: 'https://xj25uu6yw0.execute-api.eu-west-1.amazonaws.com/dev',
   bff: 'https://g7r38pbml9.execute-api.eu-west-1.amazonaws.com/dev',
   cart: 'https://.execute-api.eu-west-1.amazonaws.com/dev',
+
 };
 
 export default API_PATHS;
